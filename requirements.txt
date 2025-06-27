@@ -1,0 +1,12 @@
+a2a-sdk
+pandas
+fuzzywuzzy
+python-Levenshtein
+langchain
+langchain-anthropic
+langgraph
+httpx
+python-dotenv
+fastapi
+uvicorn[standard]
+requests
