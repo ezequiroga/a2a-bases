@@ -42,6 +42,7 @@ All agents communicate via the A2A protocol, enabling seamless inter-agent colla
 
 - **Location**: [`employee_flight_request_agent/`](./employee_flight_request_agent/)
 - **Purpose**: Manage employee flight requests and booking status
+- **Data Source**: In-memory dictionary that simulates a real database with employee flight records
 - **Capabilities**:
   - Check pending flight requests
   - Review booked flights
@@ -95,6 +96,10 @@ All agents communicate via the A2A protocol, enabling seamless inter-agent colla
    cp env_template .env
    # Edit .env file with your actual API keys
    ```
+
+   **Required API Keys:**
+   - `ANTHROPIC_API_KEY`: For Anthropic's models integration in chat and flight search agents
+   - `AVIATION_STACK_API_KEY`: For real-time flight data in the flight search agent
 
 3. Install dependencies in each agent directory
 
