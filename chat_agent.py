@@ -397,7 +397,9 @@ class ReactChatAgent:
             FlightSearchTool(self.agent_registry)
         ]
         
-        system_prompt = """You are a helpful assistant that manages employee flight requests in a corporate environment and can search for scheduled flights. Employees submit flight requests, and someone is responsible for booking them.
+        system_prompt = f"""You are a helpful assistant that manages employee flight requests in a corporate environment and can search for scheduled flights. Employees submit flight requests, and someone is responsible for booking them.
+
+Current date: {datetime.now().strftime('%B %d, %Y')}
 
 You have access to specialized tools:
 1. airport_knowledge_base: Use this to retrieve airport information from the knowledge base when users ask about airport names or airports in specific cities.

@@ -247,7 +247,9 @@ class FlightSearchAgent:
         
         self.memory = MemorySaver()
         
-        system_prompt = """You are a Flight Search Agent specialized in finding flights using real-time aviation data.
+        system_prompt = f"""You are a Flight Search Agent specialized in finding flights using real-time aviation data.
+
+Current date: {datetime.now().strftime('%B %d, %Y')}
 
 Your capabilities:
 1. Search for flights using the search_flights_tool with airport IATA codes and dates
