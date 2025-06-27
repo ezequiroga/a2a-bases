@@ -40,7 +40,7 @@ All agents communicate via the A2A protocol, enabling seamless inter-agent colla
 
 ### 2. Employee Flight Request Agent
 
-- **Location**: `employee_flight_request_agent/`
+- **Location**: [`employee_flight_request_agent/`](./employee_flight_request_agent/)
 - **Purpose**: Manage employee flight requests and booking status
 - **Capabilities**:
   - Check pending flight requests
@@ -50,9 +50,9 @@ All agents communicate via the A2A protocol, enabling seamless inter-agent colla
 
 ### 3. Airport Knowledge Base Agent
 
-- **Location**: `airport_knowledge_base_agent/`
+- **Location**: [`airport_knowledge_base_agent/`](./airport_knowledge_base_agent/)
 - **Purpose**: Provides airport information and city-airport mappings
-- **Data Sources**: Local CSV databases (airport-codes.csv, isocountry-codes.csv)
+- **Data Sources**: Local CSV databases that simulate real databases (airport-codes.csv, isocountry-codes.csv)
 - **Capabilities**:
   - Fuzzy search for airport names
   - City-to-airports mapping
@@ -61,7 +61,7 @@ All agents communicate via the A2A protocol, enabling seamless inter-agent colla
 
 ### 4. Flight Search Agent
 
-- **Location**: `flight_search_agent/`
+- **Location**: [`flight_search_agent/`](./flight_search_agent/)
 - **Purpose**: Real-time flight search using external aviation data
 - **API**: Aviation Stack API integration
 - **Features**:
@@ -275,3 +275,10 @@ python -m tests.test_flights_endpoint
 - Each agent can be developed and deployed independently
 - The chat interface provides detailed logging of all agent interactions
 - All agents support both streaming and non-streaming communication modes
+
+## 📊 Data Sources
+
+The CSV databases used in the Airport Knowledge Base Agent were downloaded from:
+
+- **Country codes**: [DataHub - Country List](https://datahub.io/core/country-list)
+- **Airport codes**: [DataHub - Airport Codes](https://datahub.io/core/airport-codes)
