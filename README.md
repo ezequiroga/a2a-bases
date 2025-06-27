@@ -142,6 +142,34 @@ The chat agent will:
 - Start HTTP server on port 9990 for push notifications
 - Launch the interactive chat interface
 
+#### Alternative: Start All Services with Single Script
+
+For convenience, you can use the provided bash script to start all agents and the chat interface with a single command:
+
+```bash
+# First, make the script executable (only needed once)
+chmod +x start_system.sh
+
+# Then run the script
+./start_system.sh
+```
+
+**Requirements:**
+
+- Bash shell (tested on macOS)
+- All dependencies installed in each agent directory
+- Proper environment variables configured (.env file)
+- Execute permissions on the script (use `chmod +x start_system.sh`)
+
+**What the script does:**
+
+- Starts all three A2A agents in background processes
+- Waits 5 seconds for agents to initialize
+- Launches the interactive chat interface
+- Automatically cleans up all processes when exiting the chat
+
+**Optional port cleanup:** The script includes commented commands to kill existing processes on ports 9990-9993. Uncomment these lines if you encounter "address already in use" errors.
+
 ## 💬 Using the Chat Interface
 
 Once all agents are running, you can interact with the system using natural language:

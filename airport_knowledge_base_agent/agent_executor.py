@@ -35,7 +35,7 @@ class AirportKnowledgeBaseAgent:
             self.airport_names = self.airport_knowledge['name'].tolist()
             self.municipalities = self.airport_knowledge['municipality'].tolist()
             
-            print(f"\n✅ Loaded airport knowledge base: {len(self.airport_knowledge)} airports from {self.airport_knowledge['iso_country'].nunique()} countries\n")
+            print(f"✅ Loaded airport knowledge base: {len(self.airport_knowledge)} airports from {self.airport_knowledge['iso_country'].nunique()} countries")
             
         except Exception as e:
             print(f"❌ Error loading airport knowledge base: {str(e)}")
