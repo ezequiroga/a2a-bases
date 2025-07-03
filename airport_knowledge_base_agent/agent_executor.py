@@ -58,7 +58,7 @@ class AirportKnowledgeBaseAgent:
         """
         if self.airport_knowledge.empty:
             await updater.update_status(
-                TaskState.error,
+                TaskState.failed,
                 new_agent_text_message(
                     "Airport knowledge base not loaded. Please check the database files.",
                     task.contextId,
