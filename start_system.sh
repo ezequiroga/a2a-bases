@@ -31,7 +31,7 @@ sleep 5
 
 echo "💬 Starting Chat Agent (Port 9990)..."
 echo "============================================================"
-cd "$SCRIPT_DIR" && uv run python3 chat_agent.py
+cd "$SCRIPT_DIR" && uv run python chat_agent.py
 
 # Cleanup function cuando se termine el chat
 cleanup() {
