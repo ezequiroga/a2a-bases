@@ -57,7 +57,16 @@ class AirportKnowledgeBaseAgent:
             String with top 5 airport names and top 5 cities with their airports
         """
         if self.airport_knowledge.empty:
-            return "Airport knowledge base not loaded. Please check the database files."
+            await updater.update_status(
+                TaskState.error,
+                new_agent_text_message(
+                    "Airport knowledge base not loaded. Please check the database files.",
+                    task.contextId,
+                    task.id,
+                ),
+                final=True
+            )
+            return
         
         await updater.update_status(
             TaskState.working,
